@@ -1,0 +1,8 @@
+MandelBrot 
+ ~ The simplest algorithm for generating a representation of the Mandelbrot set is known
+  as the "escape time" algorithm. A repeating calculation is performed for each x, y point in the plot area and based on the behavior of that calculation, a color is chosen for that pixel. 
+  ~ The result of each iteration is used as the starting values for the next.
+  ~ each pixel goes through a number of iterations to dtetermine whether its in the set or out
+  ! WHAT IS COMPLEX NUMBER  + WHAT IS SET OF COMPLEX NUMBERs
+    ++ complex numbers have both real and imaginary numbers(i) e.g a + bi
+    F(z) = z^2 + C -> c is the complex number shown above
