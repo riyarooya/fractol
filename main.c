@@ -6,13 +6,12 @@
 /*   By: juhaamid <juhaamid@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 11:06:39 by juhaamid          #+#    #+#             */
-/*   Updated: 2023/07/23 14:45:02 by juhaamid         ###   ########.fr       */
+/*   Updated: 2023/07/31 14:15:40 by juhaamid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
 #include <stdlib.h>
-
 
 void	my_mlx_pixel_put(t_pop *data, int x, int y, int color)
 {
@@ -25,8 +24,8 @@ void	my_mlx_pixel_put(t_pop *data, int x, int y, int color)
 void	all_hooks(t_pop *img)
 {
 	mlx_mouse_hook(img->win, umizoomi, img);
-	mlx_hook(img->win, 2, 1L<<0, closee, img);
 	mlx_key_hook(img->win, keymove, img);
+	mlx_hook(img->win, 17, 0, closee, img);
 }
 
 void	make_image(t_pop *img)
@@ -40,10 +39,10 @@ int	main(int ac, char **av)
 {
 	t_pop	*img;
 
-	img = malloc(sizeof(t_pop));
-	if (ac != 2 || fractol_check(av, img))
+	if (ac != 2)
 		error_mess();
-
+	img = malloc(sizeof(t_pop));
+	fractol_check(av, img);
 	img->mlx = mlx_init();
 	img->win = mlx_new_window(img->mlx, W_WIDTH, W_HEIGHT,
 			"juwairiyyah's fract-ol <3");

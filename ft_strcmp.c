@@ -6,7 +6,7 @@
 /*   By: juhaamid <juhaamid@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 08:16:09 by juhaamid          #+#    #+#             */
-/*   Updated: 2023/05/08 08:46:36 by juhaamid         ###   ########.fr       */
+/*   Updated: 2023/07/31 09:01:57 by juhaamid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,6 @@ int	ft_strcmp(char *s1, char *s2)
 
 	bop = 0;
 	while ((s1[bop] == s2[bop]) && s1[bop] != '\0' && s2[bop] != '\0')
-			bop++;
+		bop++;
 	return (s1[bop] - s2[bop]);
 }

@@ -6,12 +6,11 @@
 /*   By: juhaamid <juhaamid@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/23 11:28:45 by juhaamid          #+#    #+#             */
-/*   Updated: 2023/07/26 23:18:04 by juhaamid         ###   ########.fr       */
+/*   Updated: 2023/07/31 14:45:58 by juhaamid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
-
 
 int	is_julia(double zr, double zi, t_pop	*f)
 {
@@ -27,11 +26,11 @@ int	is_julia(double zr, double zi, t_pop	*f)
 			return (f->itera);
 		}
 		tmp = zr * zr - zi * zi;
-		zi = 2 * zr * zi + f->cr;
-		zr = tmp + f->ci;
+		zi = 2 * zr * zi + f->ci;
+		zr = tmp + f->cr;
 	}
-		f->itera = i;
-	return (1);
+	f->itera = i;
+	return (0);
 }
 
 void	julia(t_pop *f)
@@ -60,4 +59,3 @@ void	julia(t_pop *f)
 	mlx_put_image_to_window(f->mlx, f->win, f->img, 0, 0);
 	return ;
 }
-

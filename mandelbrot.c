@@ -6,12 +6,11 @@
 /*   By: juhaamid <juhaamid@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/13 13:15:55 by juhaamid          #+#    #+#             */
-/*   Updated: 2023/07/23 11:58:32 by juhaamid         ###   ########.fr       */
+/*   Updated: 2023/07/31 09:04:45 by juhaamid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
-
 
 // Zn + 1 = Zn^2 + c
 // Z0 = 1
@@ -26,7 +25,7 @@ int	is_mandelbrot(float cr, float ci, t_pop *f)
 	float	tmp;
 	int		i;
 
-    f->itera = 0;
+	f->itera = 0;
 	i = 0;
 	zr = 0;
 	zi = 0;
@@ -42,7 +41,7 @@ int	is_mandelbrot(float cr, float ci, t_pop *f)
 		zi = tmp;
 		i++;
 	}
-			f->itera = i;
+	f->itera = i;
 	return (0);
 }
 
