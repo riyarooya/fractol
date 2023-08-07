@@ -6,7 +6,7 @@
 /*   By: juhaamid <juhaamid@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 12:25:53 by nuhaamid          #+#    #+#             */
-/*   Updated: 2023/05/07 00:08:16 by juhaamid         ###   ########.fr       */
+/*   Updated: 2023/08/07 09:56:19 by juhaamid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,10 +54,10 @@ int	hexprint(va_list args, const char fmt)
 	if (pop.k == 0)
 		return (write(1, "0", 1));
 	else
-		{
-			find_hex(pop.k, fmt);
-			pop.len = sizehex(pop.k);
-		}
+	{
+		find_hex(pop.k, fmt);
+		pop.len = sizehex(pop.k);
+	}
 	return (pop.len);
 }
 // 10 to 15 minus 10 which gives 0 to 5 in ascii 

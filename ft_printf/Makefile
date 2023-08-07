@@ -6,7 +6,7 @@
 #    By: juhaamid <juhaamid@student.42abudhabi.a    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/02 15:31:28 by juhaamid          #+#    #+#              #
-#    Updated: 2022/11/17 10:47:25 by juhaamid         ###   ########.fr        #
+#    Updated: 2023/08/07 09:54:05 by juhaamid         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ SRCS = ft_printf.c \
 
 OBJS = ${SRCS:.c=.o}
 
-CC		= gcc
+CC		= cc
 RM		= rm -f
 
 CFLAGS = -Wall -Wextra -Werror

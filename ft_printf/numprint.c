@@ -6,7 +6,7 @@
 /*   By: juhaamid <juhaamid@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 13:49:15 by juhaamid          #+#    #+#             */
-/*   Updated: 2022/11/17 08:53:21 by juhaamid         ###   ########.fr       */
+/*   Updated: 2023/08/07 09:56:28 by juhaamid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	ft_putnbr(int n)
 		ft_putchar('-');
 		ft_putchar('2');
 		ft_putnbr(147483648);
-	}	
+	}
 	else if (n < 0)
 	{
 		ft_putchar('-');

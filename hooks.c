@@ -6,7 +6,7 @@
 /*   By: juhaamid <juhaamid@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 14:51:34 by juhaamid          #+#    #+#             */
-/*   Updated: 2023/07/31 12:27:26 by juhaamid         ###   ########.fr       */
+/*   Updated: 2023/08/07 10:48:14 by juhaamid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,6 @@ int	umizoomi(int code, int x, int y, t_pop *img)
 	}
 	if (code == 4)
 		m_zoom(img, 0.9, x, y);
-	mlx_clear_window(img->mlx, img->win);
 	fractolinit(img);
 	return (0);
 }

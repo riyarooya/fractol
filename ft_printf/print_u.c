@@ -6,7 +6,7 @@
 /*   By: juhaamid <juhaamid@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/16 08:45:13 by juhaamid          #+#    #+#             */
-/*   Updated: 2023/05/07 00:08:53 by juhaamid         ###   ########.fr       */
+/*   Updated: 2023/08/07 09:56:42 by juhaamid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ int	print_u(va_list args)
 	else
 	{
 		putunsign(var.k);
-			var.len = size(var.k);
+		var.len = size(var.k);
 	}
 	return (var.len);
 }

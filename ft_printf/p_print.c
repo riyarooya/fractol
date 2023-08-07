@@ -6,7 +6,7 @@
 /*   By: juhaamid <juhaamid@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/16 11:32:08 by juhaamid          #+#    #+#             */
-/*   Updated: 2022/11/17 08:53:14 by juhaamid         ###   ########.fr       */
+/*   Updated: 2023/08/07 09:56:36 by juhaamid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ int	p_print(va_list args)
 {
 	t_list	pop;
 
-		pop.len = 0;
+	pop.len = 0;
 	pop.i = va_arg(args, unsigned long);
 	if (pop.i == 0)
 		return (write(1, "0x0", 3));

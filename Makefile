@@ -6,7 +6,7 @@
 #    By: juhaamid <juhaamid@student.42abudhabi.a    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/05 20:42:17 by juhaamid          #+#    #+#              #
-#    Updated: 2023/07/31 10:01:11 by juhaamid         ###   ########.fr        #
+#    Updated: 2023/08/07 09:53:21 by juhaamid         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,7 @@ HEADER	=	include
 
 PR	=	./ft_printf/libftprintf.a
 
-CC		=	gcc
+CC		=	cc
 
 OS:= ${shell uname}
 ifeq (${OS},Darwin)

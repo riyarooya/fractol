@@ -6,7 +6,7 @@
 /*   By: juhaamid <juhaamid@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/06 23:46:40 by juhaamid          #+#    #+#             */
-/*   Updated: 2023/07/31 14:59:04 by juhaamid         ###   ########.fr       */
+/*   Updated: 2023/08/01 14:58:39 by juhaamid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,6 @@ int	color(t_pop *f, int iterations)
 	if (iterations == MAX_ITERATION)
 		return (0x00000);
 	else
-		return (0x87ceff * iterations / 0.5);
+		return (0x87ceff * iterations / 0.3);
 	return (0);
 }

@@ -6,15 +6,15 @@
 /*   By: juhaamid <juhaamid@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/23 11:28:45 by juhaamid          #+#    #+#             */
-/*   Updated: 2023/07/31 14:45:58 by juhaamid         ###   ########.fr       */
+/*   Updated: 2023/08/07 10:09:22 by juhaamid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
 
-int	is_julia(double zr, double zi, t_pop	*f)
+int	is_julia(float zr, float zi, t_pop *im)
 {
-	double	tmp;
+	float	tmp;
 	int		i;
 
 	i = 0;
@@ -22,18 +22,18 @@ int	is_julia(double zr, double zi, t_pop	*f)
 	{
 		if ((zr * zr + zi * zi) > 4)
 		{
-			f->itera = i;
-			return (f->itera);
+			im->itera = i;
+			return (im->itera);
 		}
 		tmp = zr * zr - zi * zi;
-		zi = 2 * zr * zi + f->ci;
-		zr = tmp + f->cr;
+		zi = 2 * zr * zi + im->ci;
+		zr = tmp + im->cr;
 	}
-	f->itera = i;
+	im->itera = i;
 	return (0);
 }
 
-void	julia(t_pop *f)
+void	julia(t_pop *im)
 {
 	int		x;
 	int		y;
@@ -43,19 +43,19 @@ void	julia(t_pop *f)
 	y = 0;
 	while (y < W_WIDTH)
 	{
-		pi = f->max_ima + ((float)y * (f->min_ima - f->max_ima) / W_HEIGHT);
+		pi = im->max_ima + ((float)y * (im->min_ima - im->max_ima) / W_HEIGHT);
 		x = 0;
 		while (x < W_HEIGHT)
 		{
-			pr = f->min_re + ((float)x * (f->max_re - f->min_re) / W_WIDTH);
-			if (is_julia(pr, pi, f) == 0)
-				my_mlx_pixel_put(f, x, y, 0x00000);
+			pr = im->min_re + ((float)x * (im->max_re - im->min_re) / W_WIDTH);
+			if (is_julia(pr, pi, im) == 0)
+				my_mlx_pixel_put(im, x, y, 0x00000);
 			else
-				my_mlx_pixel_put(f, x, y, color(f, is_julia(pr, pi, f)));
+				my_mlx_pixel_put(im, x, y, color(im, is_julia(pr, pi, im)));
 			x++;
 		}
 		y++;
 	}
-	mlx_put_image_to_window(f->mlx, f->win, f->img, 0, 0);
+	mlx_put_image_to_window(im->mlx, im->win, im->img, 0, 0);
 	return ;
 }

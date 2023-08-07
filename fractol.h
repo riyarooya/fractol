@@ -6,20 +6,18 @@
 /*   By: juhaamid <juhaamid@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 11:04:07 by juhaamid          #+#    #+#             */
-/*   Updated: 2023/07/31 14:59:23 by juhaamid         ###   ########.fr       */
+/*   Updated: 2023/08/07 10:32:27 by juhaamid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FRACTOL_H
 # define FRACTOL_H
 
-# define MAX_ITER 
 # define W_WIDTH 1250
 # define W_HEIGHT 1250
-# define MAX_ITERATION 100
+# define MAX_ITERATION 65
 
 # include "./mlx/mlx.h"
-// # include "./mlx_linux/mlx.h"
 # include "./ft_printf/ft_printf.h"
 # include <unistd.h>
 # include <math.h>
@@ -73,27 +71,40 @@ typedef struct s_pop
 #  define ON_MOUSE_DW 4
 # endif
 
+//******fractol-init.c*****//
+
 int		fractol_check(char **av, t_pop *img);
 int		fractolinit( t_pop *img);
+void	lastjulia(t_pop *img);
+
+//*******main.c*******//
 void	my_mlx_pixel_put(t_pop *data, int x, int y, int color);
-void	error_mess(void);
-int		ft_strcmp(char *s1, char *s2);
-void	mandelbrot(t_pop *f);
-
-char	*ft_strdup(const char *s1);
-
-void	set_minmax(t_pop *img);
-
-void	minint(t_pop *img);
-void	error_mess(void);
 void	all_hooks(t_pop *img);
-int		color(t_pop *f, int iterations);
-int		fractolinit( t_pop *img);
-void	help_controls(t_pop *i);
+void	make_image(t_pop *img);
+
+//******hooks.c//
+int		closee( t_pop *img);
+void	leftright(int code, t_pop *img);
 int		keymove(int code, t_pop *img);
 void	m_zoom(t_pop *img, float zoom, int x, int y);
 int		umizoomi(int code, int x, int y, t_pop *img);
-void	julia(t_pop *f);
-int		closee( t_pop *img);
+
+//********utils.c*********//
+void	error_mess(void);
+void	minint(t_pop *img);
+void	set_minmax(t_pop *img);
+void	help_controls(t_pop *i);
+int		color(t_pop *f, int iterations);
+
+//******julia.c******//
+void	julia(t_pop *im);
+int		is_julia(float zr, float zi, t_pop *im);
+
+//******mandelbrot.c******//
+void	mandelbrot(t_pop *im);
+int		is_mandelbrot(float cr, float ci, t_pop *im);
+
+int		ft_strcmp(char *s1, char *s2);
+char	*ft_strdup(const char *s1);
 
 #endif

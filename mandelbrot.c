@@ -6,7 +6,7 @@
 /*   By: juhaamid <juhaamid@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/13 13:15:55 by juhaamid          #+#    #+#             */
-/*   Updated: 2023/07/31 09:04:45 by juhaamid         ###   ########.fr       */
+/*   Updated: 2023/08/07 10:16:40 by juhaamid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,14 @@
 // z2 = 2^2 + 1 = 5
 // https://complex-analysis.com/content/mandelbrot_set.html
 
-int	is_mandelbrot(float cr, float ci, t_pop *f)
+int	is_mandelbrot(float cr, float ci, t_pop *im)
 {
 	float	zr;
 	float	zi;
 	float	tmp;
 	int		i;
 
-	f->itera = 0;
+	im->itera = 0;
 	i = 0;
 	zr = 0;
 	zi = 0;
@@ -33,19 +33,19 @@ int	is_mandelbrot(float cr, float ci, t_pop *f)
 	{
 		if ((zr * zr + zi * zi) > 4.0)
 		{
-			f->itera = i;
-			return (f->itera);
+			im->itera = i;
+			return (im->itera);
 		}
 		tmp = 2 * zr * zi + ci;
 		zr = zr * zr - zi * zi + cr;
 		zi = tmp;
 		i++;
 	}
-	f->itera = i;
+	im->itera = i;
 	return (0);
 }
 
-void	mandelbrot(t_pop *f)
+void	mandelbrot(t_pop *im)
 {
 	int		x;
 	int		y;
@@ -55,20 +55,21 @@ void	mandelbrot(t_pop *f)
 	y = 0;
 	while (y < W_WIDTH)
 	{
-		pi = f->max_ima + ((float)y * (f->min_ima - f->max_ima) / W_HEIGHT);
+		pi = im->max_ima + ((float)y * (im->min_ima - im->max_ima) / W_HEIGHT);
 		x = 0;
 		while (x < W_HEIGHT)
 		{
-			pr = f->min_re + ((float)x * (f->max_re - f->min_re) / W_WIDTH);
-			if (is_mandelbrot(pr, pi, f) == 0)
-				my_mlx_pixel_put(f, x, y, 0x00000);
+			pr = im->min_re + ((float)x * (im->max_re - im->min_re) / W_WIDTH);
+			if (is_mandelbrot(pr, pi, im) == 0)
+				my_mlx_pixel_put(im, x, y, 0x00000);
 			else
-				my_mlx_pixel_put(f, x, y, color(f, is_mandelbrot(pr, pi, f)));
+				my_mlx_pixel_put(im, x, y,
+					color(im, is_mandelbrot(pr, pi, im)));
 			x++;
 		}
 		y++;
 	}
-	mlx_put_image_to_window(f->mlx, f->win, f->img, 0, 0);
+	mlx_put_image_to_window(im->mlx, im->win, im->img, 0, 0);
 	return ;
 }
 
