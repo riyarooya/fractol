@@ -1,0 +1,8 @@
+// functions that alters center thorugh center_i/r based on zoom value
+// rough overview of the calculation:
+// calculate the center of the cartezian plane (different from 
+// what the pixel grid is), following that calculate the right border
+// offset (max r) by adding the current center minus the center times 
+// zoom. Your new right border position will have to be moved half that
+// 0.1, the other half is move by the other border.
+// does this even make sense?
