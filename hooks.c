@@ -6,7 +6,7 @@
 /*   By: juhaamid <juhaamid@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 14:51:34 by juhaamid          #+#    #+#             */
-/*   Updated: 2023/08/07 10:48:14 by juhaamid         ###   ########.fr       */
+/*   Updated: 2023/08/07 12:33:46 by juhaamid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 int	closee( t_pop *img)
 {
 	mlx_destroy_window(img->mlx, img->win);
+	free(img->fractal);
 	free(img);
 	ft_printf("BYEEE!");
 	exit(EXIT_FAILURE);

@@ -6,7 +6,7 @@
 #    By: juhaamid <juhaamid@student.42abudhabi.a    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/05 20:42:17 by juhaamid          #+#    #+#              #
-#    Updated: 2023/08/07 09:53:21 by juhaamid         ###   ########.fr        #
+#    Updated: 2023/08/07 13:13:20 by juhaamid         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -58,7 +58,6 @@ ${NAME}:	$(PR) ${OBJS} $(MLX)
 			${CC} ${CFLAGS} ${MLXFLG} ${OBJS} ${MLX} ${PR} -o ${NAME}
 
 $(MLX):	
-			echo fvsljndf
 			${MAKE} -C ./mlx  
 
 $(PR):	

@@ -6,17 +6,11 @@
 /*   By: juhaamid <juhaamid@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/13 13:15:55 by juhaamid          #+#    #+#             */
-/*   Updated: 2023/08/07 10:16:40 by juhaamid         ###   ########.fr       */
+/*   Updated: 2023/08/07 13:36:53 by juhaamid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
-
-// Zn + 1 = Zn^2 + c
-// Z0 = 1
-// z1 = 1^2 +1 = 2
-// z2 = 2^2 + 1 = 5
-// https://complex-analysis.com/content/mandelbrot_set.html
 
 int	is_mandelbrot(float cr, float ci, t_pop *im)
 {

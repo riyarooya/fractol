@@ -6,7 +6,7 @@
 /*   By: juhaamid <juhaamid@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/23 11:28:45 by juhaamid          #+#    #+#             */
-/*   Updated: 2023/08/07 10:09:22 by juhaamid         ###   ########.fr       */
+/*   Updated: 2023/08/07 12:56:17 by juhaamid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	is_julia(float zr, float zi, t_pop *im)
 	int		i;
 
 	i = 0;
-	while (i++ < MAX_ITERATION)
+	while (i++ <= MAX_ITERATION)
 	{
 		if ((zr * zr + zi * zi) > 4)
 		{
