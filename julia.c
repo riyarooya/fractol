@@ -6,12 +6,13 @@
 /*   By: juhaamid <juhaamid@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/23 11:28:45 by juhaamid          #+#    #+#             */
-/*   Updated: 2023/08/07 12:56:17 by juhaamid         ###   ########.fr       */
+/*   Updated: 2023/08/07 13:48:33 by juhaamid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
 
+// z = z2 + c
 int	is_julia(float zr, float zi, t_pop *im)
 {
 	float	tmp;

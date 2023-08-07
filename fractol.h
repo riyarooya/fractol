@@ -6,7 +6,7 @@
 /*   By: juhaamid <juhaamid@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 11:04:07 by juhaamid          #+#    #+#             */
-/*   Updated: 2023/08/07 10:32:27 by juhaamid         ###   ########.fr       */
+/*   Updated: 2023/08/07 13:48:00 by juhaamid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@
 # include "./mlx/mlx.h"
 # include "./ft_printf/ft_printf.h"
 # include <unistd.h>
-# include <math.h>
 # include <stddef.h>
+# include <stdlib.h>
 
 typedef struct s_pop
 {
@@ -33,10 +33,6 @@ typedef struct s_pop
 	void			*mlx;
 	void			*win;
 	char			*fractal;
-	float			x;
-	float			y;
-	float			re;
-	float			ima;
 	float			min_re;
 	float			max_re;
 	float			min_ima;
@@ -45,9 +41,7 @@ typedef struct s_pop
 	float			mid_r;
 	float			cr;
 	float			ci;
-	float			magnify;
 	unsigned int	itera;	
-	int				color;	
 }t_pop;
 
 # define PURPLE	"\033[0;35m"

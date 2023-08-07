@@ -6,12 +6,12 @@
 /*   By: juhaamid <juhaamid@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 11:06:39 by juhaamid          #+#    #+#             */
-/*   Updated: 2023/08/07 10:01:08 by juhaamid         ###   ########.fr       */
+/*   Updated: 2023/08/07 13:41:56 by juhaamid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
-#include <stdlib.h>
+
 
 void	my_mlx_pixel_put(t_pop *data, int x, int y, int color)
 {
